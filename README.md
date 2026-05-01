@@ -8,7 +8,7 @@ Za izradu ovog projekta koristili smo HTML, CSS i JavaScript, bez korištenja do
 
 ## Članovi tima 
 
-* **Amina Karahmetović** - *GitHub username: AminaKarahmetovic *
+* **Amina Karahmetović** - * GitHub username: AminaKarahmetovic *
 * **Amina Snagić** - * GitHub username:* 
-* **Alma Šmigalović** - * GitHub username:* 
+* **Alma Šmigalović** - * GitHub username: AlmaSmigalovic * 
 
