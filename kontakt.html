@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kontakt - Darivanje krvi u BiH</title>
+        <link rel="stylesheet" href="css/tptpstil.css">
+    </head>
+
+    <body>
+        <main>
+        <!-- Kontakt forma -->
+      <section class="forma-sekcija">
+
+    <article>
+
+        <form id="kontaktForma">
+            <div class="red">
+
+                <div class="polje-grupa">
+
+                    <label for="ime">Ime:</label>
+
+                    <input type="text"
+                        id="ime"
+                        name="ime"
+                        placeholder="Unesite svoje ime">
+
+                    <span id="imeGreska" class="error-tekst"></span>
+
+                </div>
+
+                <div class="polje-grupa">
+
+                    <label for="prezime">Prezime:</label>
+
+                    <input type="text"
+                        id="prezime"
+                        name="prezime"
+                        placeholder="Unesite svoje prezime">
+
+                    <span id="prezimeGreska" class="error-tekst"></span>
+
+                </div>
+
+            </div>
+
+            <div class="red">
+
+                <div class="polje-grupa">
+
+                    <label for="email">Email adresa:</label>
+
+                    <input type="text"
+                        id="email"
+                        name="email"
+                        placeholder="primjer@mail.com">
+
+                    <span id="emailGreska" class="error-tekst"></span>
+
+                </div>
+
+                <div class="polje-grupa">
+
+                    <label for="telefon">Telefon:</label>
+
+                    <input type="text"
+                        id="telefon"
+                        name="telefon"
+                        placeholder="061 123 456">
+
+                    <span id="telefonGreska" class="error-tekst"></span>
+
+                </div>
+
+            </div>
+
+            <!-- Dropdown -->
+            <div class="polje-grupa">
+
+                <label for="tema">Tema upita:</label>
+
+                <select id="tema" name="tema">
+
+                    <option value="">-- Odaberite temu --</option>
+
+                    <option value="hitan">
+                        Hitan upit
+                    </option>
+
+                    <option value="zdravlje">
+                        Mogu li darovati? (Zdravlje i uslovi)
+                    </option>
+
+                    <option value="termini">
+                        Termini i lokacije akcija
+                    </option>
+
+                    <option value="potvrde">
+                        Potvrde i knjižice
+                    </option>
+
+                    <option value="organizacija">
+                        Organizacija akcije darivanja
+                    </option>
+
+                    <option value="tehnicki">
+                        Tehničke poteškoće
+                    </option>
+
+                    <option value="ostalo">
+                        Ostalo
+                    </option>
+
+                </select>
+
+                <span id="temaGreska" class="error-tekst"></span>
+
+            </div>
+            
+            <div class="polje-grupa">
+
+                <label for="poruka">Vaša poruka:</label>
+
+                <textarea id="poruka"
+                    name="poruka"
+                    rows="5"
+                    placeholder="Napišite svoju poruku..."></textarea>
+
+                <span id="porukaGreska" class="error-tekst"></span>
+
+            </div>
+            <div class="akcije">
+
+                <button type="submit" id="dugmePosalji">
+                    Pošalji poruku
+                </button>
+
+                <button type="reset" id="dugmeReset">
+                    Obriši formu
+                </button>
+
+            </div>
+
+        </form>
+
+        <div id="uspjehPoruka" class="uspjeh-poruka"></div>
+
+    </article>
+
+</section>
+</main>
+    </body>
+</html>
