@@ -9,14 +9,19 @@
     <body>
         <header>
             <!--Logo stranice-->
-            <div class="logo">
                 <h1>LifeConnect</h1>
-            </div>
-            <!-- Navigacioni meni -->
-            <nav>
+             <!-- Navigacioni meni -->
+              <nav id="glavna-navigacija">
                 <ul>
-                    <!--Link za vraćanje na početnu stranicu-->
-                    <li><a href="index.html">Početna</a></li>
+                  <li><a href="index.html">Početna</a></li>
+                  <li><a href="sadržaj.html">Detalji o darivanju</a></li>
+                  <li><a href="kontakt.html">Kontakt</a></li>
+                  <li><a href="https://github.com/AminaKarahmetovic/Grupa13-TPTP-2026.git" target="_blank">GitHub</a></li>
+                </ul>
+              </nav>
+              </header>
+          <hr>  <nav class="tvoja-navigacija">
+                <ul>
                     <!--Link za sekciju kategorije-->
                     <li><a href="#kategorije-sekcija">🩸Kategorije</a></li>
                     <!--Link za sekciju tabela-->
@@ -30,7 +35,7 @@
 
                 </ul>
             </nav>
-        </header> 
+        
         <hr>
         <main>
             <section>
@@ -40,9 +45,8 @@
 
                 <div class="liste-kontejner">
                     <!-- Div kontejner za liste radi bolje organizacije u css-u -->
-                    <article>
                         <!-- Ugniježđena lista -->
-                <h3>Kategorije darivanja:</h3>
+                <h3 id="kategorije-sekcija">Kategorije darivanja:</h3>
                 <ul>
                     <li>Dobrovoljno darivanje pune doze krvi:
                         <ul>
@@ -72,7 +76,7 @@
  </ul>
 </li>
 
-<li><strong>Rh faktor:</strong>
+<li id="rh-detalji"><strong>Rh faktor:</strong>
     <ul>
         <li>Rh pozitivna (D antigen prisutan)</li>
         <li>Rh negativna (D antigen odsutan)</li>
@@ -194,6 +198,7 @@
     </div>
     <a href="#vrh" class="na-vrh">↑ Skoči na vrh</a>
   </section>
+
 
 </main>
 
