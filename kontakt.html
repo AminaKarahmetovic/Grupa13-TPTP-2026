@@ -4,82 +4,194 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kontakt - Darivanje krvi u BiH</title>
+        <!-- Link za CSS stilove -->
         <link rel="stylesheet" href="css/tptpstil.css">
     </head>
 
     <body>
+        <header>
+            <!-- Logo stranice -->
+            <h1>LifeConnect</h1>
+            <!-- Navigacioni meni -->
+            <nav id="glavna-navigacija">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="sadrzaj.html">Detalji o darivanju</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="https://github.com/AminaKarahmetovic/Grupa13-TPTP-2026.git" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <main>
-        <!-- Uvodni tekst kontakt stranice -->
-       <section class="uvodni-dio">
-            <div class="tekst-naslov">
-                <h2>Kontaktirajte nas</h2>
-                <p>Imate pitanje, sugestiju ili želite organizovati akciju darivanja krvi? Popunite formu i javićemo vam se u najkraćem mogućem roku.</p>
+            <!-- Uvodni tekst kontakt stranice -->
+            <section class="uvodni-dio">
+                <div class="tekst-naslov">
+                    <h2>Kontaktirajte nas</h2>
+                    <p>Imate pitanje, sugestiju ili želite organizovati akciju darivanja krvi? Popunite formu i javićemo vam se u najkraćem mogućem roku.</p>
+                </div>
+            </section>
+
+            <!-- Kontakt forma -->
+            <section class="forma-sekcija">
+            <h2>Pošaljite nam poruku</h2>
+                <!-- novalidate iskljucuje defaultnu browser validaciju jer se radi prilagodjena JS validacija -->
+                <form id="kontaktForma" novalidate>
+
+                    <div class="red">
+                        <div class="polje-grupa">
+                            <label for="ime">Ime:</label>
+                            <input type="text" id="ime" name="ime" placeholder="Unesite svoje ime">
+                            <span id="imeGreska" class="error-tekst"></span>
+                        </div>
+                        <div class="polje-grupa">
+                            <label for="prezime">Prezime:</label>
+                            <input type="text" id="prezime" name="prezime" placeholder="Unesite svoje prezime">
+                            <span id="prezimeGreska" class="error-tekst"></span>
+                        </div>
+                    </div>
+
+                    <div class="red">
+                        <div class="polje-grupa">
+                            <label for="email">Email adresa:</label>
+                            <!-- type="text" jer validaciju radimo sami kroz JavaScript -->
+                            <input type="text" id="email" name="email" placeholder="primjer@mail.com">
+                            <span id="emailGreska" class="error-tekst"></span>
+                        </div>
+                        <div class="polje-grupa">
+                            <label for="telefon">Telefon:</label>
+                            <!-- type="text" jer validaciju radimo sami kroz JavaScript -->
+                            <input type="text" id="telefon" name="telefon" placeholder="061 123 456">
+                            <span id="telefonGreska" class="error-tekst"></span>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown za odabir teme upita -->
+                    <div class="polje-grupa">
+                        <label for="tema">Tema upita:</label>
+                        <select id="tema" name="tema">
+                            <option value="">-- Odaberite temu --</option>
+                            <option value="hitan">Hitan upit</option>
+                            <option value="zdravlje">Mogu li darovati? (Zdravlje i uslovi)</option>
+                            <option value="organizacija">Želim organizovati akciju darivanja</option>
+                            <option value="potvrde">Potvrde i knjižice</option>
+                            <option value="tehnicki">Tehničke poteškoće</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
+                        <span id="temaGreska" class="error-tekst"></span>
+                    </div>
+
+                    <div class="polje-grupa">
+                        <label for="poruka">Vaša poruka:</label>
+                        <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite svoju poruku..."></textarea>
+                        <span id="porukaGreska" class="error-tekst"></span>
+                    </div>
+
+                    <div class="akcije">
+                        <button type="submit" id="dugmePosalji">Pošalji poruku</button>
+                        <button type="reset" id="dugmeReset">Obriši formu</button>
+                    </div>
+                    
+                   </form>
+
+                <!-- Poruka uspjeha, prikazuje se kroz JavaScript nakon uspjesnog slanja forme -->
+                <div id="uspjehPoruka" style="display:none; margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; border: 1px solid #c3e6cb;">
+                </div>
+            </section>
+
+            <!-- Aside dio sa kontakt informacijama -->
+            <aside class="kontakt-info">
+
+                <!-- Poziv na akciju -->
+                <div class="poziv-info">
+                    <h3>Dodatne informacije</h3>
+                    <p>Za još informacija pozovite nas na broj:</p>
+                    <p><strong><a href="tel:080020123">080 020 123</a></strong></p>
+                    <p><small>(Besplatan poziv)</small></p>
+                </div>
+                <h3>Kontakt informacije</h3>
+
+                <!-- Email -->
+                <div class="info-stavka">
+                    <img src="images/mail.png" alt="Email ikonica" class="icon">
+                    <div>
+                        <strong>Email</strong>
+                        <p><a href="mailto:info@darivanje.ba">info@darivanje.ba</a></p>
+                        <p>Odgovaramo u najkraćem roku</p>
+                    </div>
+                </div>
+
+                <!-- Adresa -->
+                <div class="info-stavka">
+                    <img src="images/lokacija.png" alt="Lokacija ikonica" class="icon">
+                    <div>
+                        <strong>Adresa</strong>
+                        <p>Zavod za transfuzijsku medicinu FBiH</p>
+                        <p>Bolnička 25, 71000 Sarajevo</p>
+                        <p><a href="http://www.ztmfbih.ba" target="_blank">Posjetite nas →</a></p>
+                    </div>
+                </div>
+
+                <!-- Zanima li vas -->
+                <div class="zanima-vas">
+                    <img src="images/poruka.png" alt="Poruka ikonica" class="icon">
+                    <div>
+                        <p>Jedna doza vaše krvi može spasiti do 3 života.</p>
+                        <strong>Budite heroj. Darujte krv.</strong>
+                    </div>
+                </div>
+
+                <!-- Napomena -->
+                <div class="info-stavka napomena">
+                    <img src="images/napomena.png" alt="Ikonica napomena" class="icon">
+                    <div>
+                        <strong>Napomena</strong>
+                        <p>Obavezno ponesite <strong>identifikacioni dokument</strong> sa fotografijom (lična karta, vozačka dozvola ili pasoš).</p>
+                    </div>
+                </div>
+
+            </aside>
+        </main>
+        <footer>
+        <div class="footer-container">
+            <div class="footer-sekcija">
+                <h4> O projektu</h4>
+                <p><strong> Tema:</strong> Darivanje krvi u Bosni i Hercegovini</p>
+                <p><strong> Predmet:</strong> Tehnologije za podršku tehničkom pisanju</p>
+                <p><strong> Akademska godina:</strong> 2025/2026</p>
             </div>
-        </section>
-<!-- Kontakt forma -->
-        <section class="forma-sekcija">
-            <form id="kontaktForma" novalidate>
 
-                <div class="red">
-                    <div class="polje-grupa">
-                        <label for="ime">Ime:</label>
-                        <input type="text" id="ime" name="ime" placeholder="Unesite svoje ime">
-                        <span id="imeGreska" class="error-tekst"></span>
-                    </div>
-                    <div class="polje-grupa">
-                        <label for="prezime">Prezime:</label>
-                        <input type="text" id="prezime" name="prezime" placeholder="Unesite svoje prezime">
-                        <span id="prezimeGreska" class="error-tekst"></span>
-                    </div>
-                </div>
+            <div class="footer-sekcija">
+                <h4> Autorski tim i podjela rada</h4>
+                <ul>
+                    <li><strong> Amina Karahmetović </strong> - Početna stranica (<code> index.html</code>)</li>
+                    <li><strong> Amina Snagić </strong> - Detaljni sadržaj (<code> sadrzaj.html</code>)</li>
+                    <li><strong> Alma Šmigalović</strong> - Kontakt forma i lokacije (<code> kontakt.html</code>)</li>
 
-                <div class="red">
-                    <div class="polje-grupa">
-                        <label for="email">Email adresa:</label>
-                        <input type="text" id="email" name="email" placeholder="primjer@mail.com">
-                        <span id="emailGreska" class="error-tekst"></span>
-                    </div>
-                    <div class="polje-grupa">
-                        <label for="telefon">Telefon:</label>
-                        <input type="text" id="telefon" name="telefon" placeholder="061 123 456">
-                        <span id="telefonGreska" class="error-tekst"></span>
-                    </div>
-                </div>
-                <!-- Dropdown za odabir teme upita -->
-                <div class="polje-grupa">
-                    <label for="tema">Tema upita:</label>
-                    <select id="tema" name="tema">
-                        <option value="">-- Odaberite temu --</option>
-                        <option value="hitan">Hitan upit</option>
-                        <option value="zdravlje">Mogu li darovati? (Zdravlje i uslovi)</option>
-                        <option value="organizacija">Želim organizovati akciju darivanja</option>
-                        <option value="potvrde">Potvrde i knjižice</option>
-                        <option value="tehnicki">Tehničke poteškoće</option>
-                        <option value="ostalo">Ostalo</option>
-                    </select>
-                    <span id="temaGreska" class="error-tekst"></span>
-                </div>
-
-                <div class="polje-grupa">
-                    <label for="poruka">Vaša poruka:</label>
-                    <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite svoju poruku..."></textarea>
-                    <span id="porukaGreska" class="error-tekst"></span>
-                </div>
-
-                <div class="akcije">
-                    <button type="submit" id="dugmePosalji">Pošalji poruku</button>
-                    <button type="reset" id="dugmeReset">Obriši formu</button>
-                </div>
-
-            </form>
-            <!-- Poruka uspjeha, prikazuje se kroz JavaScript nakon uspjesnog slanja forme -->
-
-            <div id="uspjehPoruka" style="display:none; margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border-radius: 5px; border: 1px solid #c3e6cb;">
+                </ul>
             </div>
 
-        </section>
+            <div class="footer-sekcija">
+                <h4> Navigacija kroz sajt</h4>
+                <div class="footer-linkovi">
+                    <a href="index.html"> Početna</a>|
+                    <a href="sadrzaj.html"> Sadržaj</a>|
+                    <a href="kontakt.html"> Kontakt</a>|
+                 </div>
+                 <div class="footer-drustvene-mreze">
+                    <h4>Pratite rad zavoda:</h4>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> | 
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> | 
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+         </div>
 
-</main>
-<script src="js/tptpskripte.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2026  Edukativni projekat studenata Fakulteta elektrotehnike.</p>
+        </div>
+    </footer>
+
+        <script src="js/tptpskripte.js"></script>
     </body>
 </html>
