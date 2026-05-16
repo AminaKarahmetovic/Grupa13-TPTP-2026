@@ -12,20 +12,149 @@
         <nav id="glavna-navigacija">
             <ul>
                 <li><a href="index.html">Početna</a></li>
-                <li><a href="sadržaj.html">Detalji o darivanju</a></li>
+                <li><a href="sadrzaj.html">Detalji o darivanju</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="https://github.com/AminaKarahmetovic/Grupa13-TPTP-2026" target="_blank">Projektni GitHub</a></li>
+                <li><a href="https://github.com/AminaKarahmetovic/Grupa13-TPTP-2026" target="_blank">GitHub</a></li>
             </ul>
         </nav>
     </header>
-    <nav id="filteri-nav">
+    <div class="glavni-okvir">
+    <nav id="filter-nav">
         <h3>Prilagođeno vama:</h3>
         <ul>
-            <li><a href="#" onlick="filtriraj('sve')">Sve informacije</a></li>
-            <li><a href="#" onlick="filtriraj('novi')">Novi darivaoci</a></li>
-            <li><a href="#" onlick="filtriraj('redovni')">Redovni darivaoci</a></li>
-            <li><a href="#" onlick="filtriraj('plazma')">Darivanje plazme</a></li>
-            <li><a href="#" onlick="filtriraj('hitno')">Hitni apeli</a></li>
+            <li><a href="#" onclick="filtriraj('sve')">Sve informacije</a></li>
+            <li><a href="#" onclick="filtriraj('novi')">Novi darivaoci</a></li>
+            <li><a href="#" onclick="filtriraj('redovni')">Redovni darivaoci</a></li>
+            <li><a href="#" onclick="filtriraj('plazma')">Darivanje plazme</a></li>
+            <li><a href="#" onclick="filtriraj('hitno')">Hitni apeli</a></li>
             </ul>
     </nav>
+    <main id="glavni-sadrzaj">
+        <section class="uvod">
+            <h2> Sve što trebate znati na jednom mjestu</h2>
+            <p> Kliknite na kartice ispod za brze informacije ili istražite detalje na linkovima.</p>
+        </section>
+
+        <div class="cards-container">
+            <article class="card" data-category="sve">
+                <img src=" https://nastava.hr/wp-content/uploads/2025/12/blood_composition_and_function_1_ea7s3.jpg" alt="Sastav krvi">
+
+                <details>
+                    <summary> Šta je zapravo krv?</summary>
+                    <p> Krv je tečno tkivo koje prenosi kiseonik i hranu do svih ćelija u tijelu. Sastoji se od plazme, eritrocita, leukocita i trombocita.</p>
+                    <a href="sadrzaj.html#definicija-krvi">Opširnije o sastavu krvi →</a>
+                </details>
+            </article>
+
+            <article class="card" data-category="novi">
+                <img src=" https://media.shop-medikor.hr/media/blog/young-male-psysician-with-patient-measuring-blood-pressure_3_.jpg" alt="Ljekarski pregled">
+                <details>
+                    <summary> Ko (ne) može darovati krv?</summary>
+                    <p> Darovalac može biti svaka zdrava osoba od 18 do 65 godina, teža od 50kg, sa urednim pritiskom i hemoglobinom.</p>
+                    <a href="sadrzaj.html#uslovi-darivanja"> Provjeri detaljne uslove  →</a>
+
+
+                </details>
+            </article>
+
+            <article class="card" data-category="novi"> 
+                <img src="https://static.kurir.rs/Thumbnail/1510320/jpeg/glavna-stockphotobloodspecimeninawoman181679891.jpg?ts=2022-03-31T22:27:19" alt="Osoba se smiješi">
+
+                <details>
+                    <summary> Pobijedite strah od igle </summary>
+                    <p> Ubod traje samo sekundu! Medicinsko osoblje je veoma pažljivo, a proces je gotovo bezbolan. Vaša hrabrost spašava život!</p>
+                    <a href="sadrzaj.html#savjeti-strah"> Savjeti za opuštanje →</a>
+                </details>
+            </article>
+
+            <article class="card" data-category="hitno">
+                <img src=" https://www.adiva.hr/wp-content/uploads/2021/07/shutterstock_1797013756.jpg" alt="Krvne grupe epruvete">
+                <details>
+                    <summary> Zašto je tvoja krvna grupa bitna</summary>
+                    <p> U BiH su najčešće A+ i 0+, ali su negativne grupe (Rh -) uvijek najpotrebnije jer ih ima jako malo stanovništva.</p>
+                    <a href="sadrzaj.html#vaznost-grupa"> Statistika zaliha u BiH →</a>
+
+                </details>
+            </article>
+
+            <article class="card" data-category="redovni">
+                <img src=" https://www.wikihow.com/images/thumb/1/16/Eat-After-Donating-Blood-Step-7-Version-2.jpg/v4-460px-Eat-After-Donating-Blood-Step-7-Version-2.jpg " alt="Čaša vode i sendvič">
+                <details>
+                    <summary> Oporavak nakon darivanja</summary>
+                    <p> Nakon darivanja odmorite 15 minuta, popijte sok i pojedite lagan obrok. Izbjegavajte težak fizički napor taj dan.</p>
+                    <a href="sadrzaj.html#nakon-darivanja"> Vodič za oporavak →</a>
+                </details>
+            </article>
+
+            <article class="card" data-category="hitno">
+                <img src="https://media.federalna.ba/storage/2024/februar/18.02.2024/4%20VELIDA%20K%20V%20U%20PET%2014%2002.jpg  "  alt="Ruka u ruci">
+                <details>
+                    <summary> Jedna doza = Tri života</summary>
+                    <p> Vaša doza krvi se dijeli na komponente. Jednim darivanjem pomažete čak tri različita pacijenta u bolnicama.</p>
+                    <a href="sadrzaj.html#uticaj-darivanja"> Gdje ide Vaša krv →</a>
+
+                </details>
+            </article>
+
+        </div>
+    </main>
+    </div>
+
+    <aside id="lokacija-zavoda">
+        <h3> Gdje možete darovati krv? </h3>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.8436573733!2d18.41162447663435!3d43.85848773911568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8dfa442e971%3A0x6b772421714159f8!2sZavod%20za%20transfuzijsku%20medicinu%20FBiH!5e0!3m2!1sbs!2sba!4v1715340000000!5m2!1sbs!2sba" 
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <p> Radno vrijeme: Pon - Pet | 08:00 - 16:00 </p>
+    </aside>
+
+    <footer>
+        <div class=" footer-container">
+            <div class="footer-sekcija">
+                <h4> O projektu</h4>
+                <p><strong> Tema:</strong> Darivanje krvi u Bosni i Hercegovini</p>
+                <p><strong> Predmet:</strong> Tehnologije za podršku tehničkom pisanju</p>
+                <p><strong> Akademska godina:</strong> 2025/2026</p>
+            </div>
+
+            <div class="footer-sekcija">
+                <h4> Autorski tim i podjela rada</h4>
+                <ul>
+                    <li><strong> Amina Karahmetović </strong> - Početna stranica (<code>index.html</code>)</li>
+                    <li><strong> Amina Snagić </strong> - Detaljni sadržaj (<code>sadrzaj.html</code>)</li>
+                    <li><strong> Alma Šmigalović</strong> - Kontakt forma i lokacije (<code>kontakt.html</code>)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer-sekcija">
+                <h4> Navigacija kroz sajt</h4>
+                <div class="footer-linkovi">
+                    <a href="index.html"> Početna</a>|
+                    <a href="sadrzaj.html"> Sadržaj</a>|
+                    <a href="kontakt.html"> Kontakt</a>|
+                 </div>
+                 <div class="footer-drustvene-mreze">
+                    <h4>Pratite rad zavoda:</h4>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a> | 
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a> | 
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+         </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026  Edukativni projekat studenata Fakulteta elektrotehnike.</p>
+        </div>
+    </footer>
+
+
+
+
     
